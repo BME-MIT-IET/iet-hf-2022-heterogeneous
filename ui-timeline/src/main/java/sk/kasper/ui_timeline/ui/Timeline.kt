@@ -265,7 +265,6 @@ private fun RocketIcon(
     modifier: Modifier = Modifier, rocketName: String, rocketIconId: Int
 ) {
     if (rocketIconId == 0) {
-        // todo temp solution: compose canvas can't draw text
         val roundedSquareLetterProvider = RoundedSquareLetterProvider(LocalContext.current)
         Surface(
             modifier = modifier.requiredSize(dimensionResource(id = R.dimen.rocket_icon_size))
