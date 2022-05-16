@@ -29,6 +29,7 @@ import sk.kasper.base.logger.Logger
 import sk.kasper.ui_common.BaseFragment
 import sk.kasper.ui_common.tag.Filter
 import sk.kasper.ui_common.theme.SpaceTheme
+import sk.kasper.ui_timeline.R.string.RocketName
 import sk.kasper.ui_timeline.ui.LaunchListItemLayout
 import sk.kasper.ui_timeline.ui.filterDefinition
 
@@ -41,11 +42,12 @@ class TagsFragment : BaseFragment() {
             "Saturn V | Apollo 11",
             LocalDateTime.of(1969, 7, 16, 10, 59),
             rocketResId = R.drawable.saturn_v,
-            rocketName = "Saturn V",
+            rocketName = RocketName.toString(),
             accurateDate = true,
             accurateTime = false,
             tags = emptyList()
         )
+
 
         val apollo_12 = LaunchListItem(
             "id",
@@ -108,7 +110,7 @@ class TagsFragment : BaseFragment() {
             "Atlas V | Curiosity",
             LocalDateTime.of(2011, 11, 26, 10, 59),
             rocketResId = R.drawable.atlas_5,
-            rocketName = "Atlas V",
+            rocketName = RocketName.toString(),
             accurateDate = true,
             accurateTime = false,
             tags = emptyList()
@@ -143,7 +145,7 @@ class TagsFragment : BaseFragment() {
             "Atlas V | Perseverance",
             LocalDateTime.of(2020, 7, 30, 10, 59),
             rocketResId = R.drawable.atlas_5,
-            rocketName = "Atlas V",
+            rocketName = RocketName.toString(),
             accurateDate = true,
             accurateTime = false,
             tags = emptyList()
@@ -166,7 +168,7 @@ class TagsFragment : BaseFragment() {
             "Atlas V 421 | SBIRS GEO-5",
             LocalDateTime.of(2021, 7, 25, 10, 59),
             rocketResId = R.drawable.ariane_5,
-            rocketName = "Atlas V",
+            rocketName = RocketName.toString(),
             accurateDate = true,
             accurateTime = true,
             tags = emptyList()

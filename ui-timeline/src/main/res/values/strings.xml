@@ -2,4 +2,5 @@
 <resources>
     <string name="compose_playground">Compose playground</string>
     <string name="ui_toolkit_playground">UI toolkit playground</string>
+    <string name="RocketName">Saturn V</string>
 </resources>
