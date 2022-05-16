@@ -88,7 +88,7 @@ class SettingsViewModel @Inject constructor(private val settingsManager: Setting
 
         viewModelScope.launch {
             settingsManager.getSettingChanges().collect {
-                onSettingChanged(it)
+                onSettingChanged()
             }
         }
     }
@@ -107,7 +107,7 @@ class SettingsViewModel @Inject constructor(private val settingsManager: Setting
         }
     }
 
-    private fun onSettingChanged(settingKey: SettingKey) = action {
+    private fun onSettingChanged() = action {
         reduce {
             copy(settings = createSettings())
         }
