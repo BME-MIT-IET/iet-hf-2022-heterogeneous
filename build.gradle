@@ -17,10 +17,12 @@ buildscript {
         classpath libs.google.gms.google.services
         classpath libs.kotlin.gradle
         classpath libs.dagger.hilt.gradle
+        classpath "org.jacoco:org.jacoco.core:0.8.6"
     }
 }
 
 allprojects {
+    apply plugin: 'jacoco'
     repositories {
         mavenCentral()
         google()

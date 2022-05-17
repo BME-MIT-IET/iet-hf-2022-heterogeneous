@@ -8,6 +8,8 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+apply from: "$project.rootDir/jacoco.gradle"
+
 android {
     signingConfigs {
         config {
