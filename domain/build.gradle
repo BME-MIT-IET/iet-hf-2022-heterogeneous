@@ -24,4 +24,16 @@ dependencies {
     testImplementation libs.junit
     testImplementation libs.mockito.kotlin
     testImplementation libs.google.truth
+    testImplementation 'io.cucumber:cucumber-java8:6.1.1'
+    testImplementation 'info.cukes:cucumber-junit:1.2.5'
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+test {
+    useJUnitPlatform()
 }
