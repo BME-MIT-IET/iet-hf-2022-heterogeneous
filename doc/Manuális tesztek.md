@@ -48,3 +48,11 @@ Bizonyos filtereknek vannak al-filterei is (Pl.: "ISS"-nek a "Manned" és a "Soy
 ### Lehetséges megoldás:
 Egy al-filter kikapcsolásakor a szülőfeltétel figyelembevétele kilistázáskor.
 
+## Működő funkciók:
+- Filterek alapvetően jól szűrnek, amíg nem refreshelünk rá.
+- Dark/Light téma jól működik.
+- Egy bizonyos kilövésre koppintva az adatok megfelelően megjelennek.
+- A "Watch Live" funkció jól működik, elnavigál a megfelelő weboldalra.
+
+# Hozzáfűzés: 
+A compose playground funkciónak szerintünk a fejlesztés közbeni próbálgatáson kívül nem hordoz semmilyen funkciót, ezért ezt nem teszteltük. 
