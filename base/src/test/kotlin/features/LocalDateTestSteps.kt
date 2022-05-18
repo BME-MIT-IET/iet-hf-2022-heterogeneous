@@ -6,12 +6,15 @@ import io.cucumber.java8.En
 import junit.framework.Assert.assertEquals
 import junit.framework.Assert.assertTrue
 import org.junit.Assert
+import org.threeten.bp.Instant
+
+import org.threeten.bp.ZoneId
+import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.TextStyle
+import org.threeten.bp.temporal.ChronoUnit
+import org.threeten.bp.temporal.Temporal
 import sk.kasper.base.utils.toTimeStamp
-import java.time.DayOfWeek
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.Month
+import java.time.*
 import java.time.temporal.TemporalAdjuster
 import java.time.temporal.TemporalAdjusters
 import java.util.*
@@ -26,6 +29,12 @@ class LocalDateTestSteps : En {
     private lateinit var night: LocalDateTime
     private lateinit var midnight: LocalDateTime
     private lateinit var todayDay: DayOfWeek
+    private lateinit var epoch : Instant
+    private lateinit var plus30SecondsFromEpoch : Instant
+    private lateinit var period : Period
+
+
+
 
 
 
@@ -75,14 +84,32 @@ class LocalDateTestSteps : En {
             todayDay=DayOfWeek.valueOf(day)
         }
 
-        Given("Date time of \"America/Los_Angeles\" and \"Asia/Tokyo\"") {
-            TODO("Not yet implemented")
+
+        Given("an instant") {
+            epoch = Instant.ofEpochMilli(0)
         }
-        When("we get the timezones") {
-            TODO("Not yet implemented")
+        When("giving it plusz 30 sec") {
+            plus30SecondsFromEpoch = epoch.plusSeconds(30)
         }
-        Then("Tokyo time is plus 10 hours and 50 minutes") {
-            TODO("Not yet implemented")
+        Then("it has to be 30L") {
+            assertTrue(epoch.until(plus30SecondsFromEpoch, ChronoUnit.SECONDS) == 30L)
         }
+
+        Given("one day what is {int} {string} {int}") { year : Int, month: String, day : Int ->
+            date= LocalDate.of(year, Month.valueOf(month), day)
+
+        }
+        When("the other day is {int} {string} {int}") { year : Int, month: String, day : Int ->
+            nextdate= LocalDate.of(year, Month.valueOf(month), day)
+
+            period= Period.between(date,nextdate);
+        }
+        Then("the period has {int} months") {month : Int ->
+            assertEquals(month, period.months)
+        }
+        And("{int} days") { day : Int ->
+            assertEquals(day, period.days)
+        }
+
     }
 }

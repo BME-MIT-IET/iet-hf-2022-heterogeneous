@@ -20,7 +20,15 @@ Feature: Local date Test
     Then It should display "Friday"
     And "F"
 
-  Scenario: Zone Data time from La to Tokyo
-    Given Date time of "America/Los_Angeles" and "Asia/Tokyo"
-    When we get the timezones
-    Then Tokyo time is plus 10 hours and 50 minutes
+  Scenario: Instant plus 30 second
+    Given an instant
+    When giving it plusz 30 sec
+    Then it has to be 30L
+
+  Scenario: A period between 2 days
+    Given one day what is 2017 "NOVEMBER" 16
+    When the other day is 2017 "DECEMBER" 24
+    Then the period has 1 months
+    And 8 days
+
+
