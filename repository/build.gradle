@@ -8,7 +8,11 @@ java {
     sourceCompatibility buildConfig.javaVersion
     targetCompatibility buildConfig.javaVersion
 }
-
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
 dependencies {
     implementation project(':entity')
     implementation project(":database")
