@@ -32,8 +32,8 @@ class GetTimelineItemsImplTest {
     @Mock
     private lateinit var sync: SyncLaunchesRepository
 
-    private companion object {
-        private const val LAUNCH_ID_1 = "ID 1"
+    companion object {
+        const val LAUNCH_ID_1 = "ID 1"
         private const val LAUNCH_ID_2 = "ID 2"
     }
 

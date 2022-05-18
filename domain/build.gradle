@@ -26,6 +26,8 @@ dependencies {
     testImplementation libs.google.truth
     testImplementation 'io.cucumber:cucumber-java8:6.1.1'
     testImplementation 'info.cukes:cucumber-junit:1.2.5'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 }
 
 configurations {
