@@ -21,8 +21,8 @@ import sk.kasper.domain.utils.createLaunch
 class ScheduleLaunchNotificationsImplTest {
 
     companion object {
-        private val CURRENT_DATE_TIME: LocalDateTime = LocalDateTime.of(2001, 4, 30, 10, 0)
-        private const val LAUNCH_ID = "id"
+        internal val CURRENT_DATE_TIME: LocalDateTime = LocalDateTime.of(2001, 4, 30, 10, 0)
+        internal const val LAUNCH_ID = "id"
     }
 
     private lateinit var scheduleLaunchNotifications: ScheduleLaunchNotificationsImpl
