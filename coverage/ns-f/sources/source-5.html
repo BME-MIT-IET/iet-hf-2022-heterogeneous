@@ -1,0 +1,155 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > RocketMapper</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">sk.kasper.ui_common.mapper</a>
+</div>
+
+<h1>Coverage Summary for Class: RocketMapper (sk.kasper.ui_common.mapper)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RocketMapper</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (2/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    48,3%
+  </span>
+  <span class="absValue">
+    (14/29)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package sk.kasper.ui_common.mapper
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import sk.kasper.entity.Rocket
+<i class="no-highlight">4</i>&nbsp;import sk.kasper.ui_common.R
+<i class="no-highlight">5</i>&nbsp;import sk.kasper.ui_common.tag.FilterRocket
+<i class="no-highlight">6</i>&nbsp;import javax.inject.Inject
+<i class="no-highlight">7</i>&nbsp;
+<b class="fc"><i class="no-highlight">8</i>&nbsp;class RocketMapper @Inject constructor() {</b>
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;    fun toDrawableRes(rocketId: Long?): Int {
+<b class="fc"><i class="no-highlight">11</i>&nbsp;        return when (rocketId) {</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;            Rocket.SOYUZ -&gt; R.drawable.soyuz</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;            Rocket.ARIANE_5 -&gt; R.drawable.ariane_5</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;            Rocket.ATLAS_5 -&gt; R.drawable.atlas_5</b>
+<b class="fc"><i class="no-highlight">15</i>&nbsp;            Rocket.FALCON_9 -&gt; R.drawable.falcon_9</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;            Rocket.FALCON_HEAVY -&gt; R.drawable.falcon_heavy</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;            Rocket.DELTA_4_HEAVY -&gt; R.drawable.delta_iv_heavy</b>
+<b class="fc"><i class="no-highlight">18</i>&nbsp;            Rocket.ELECTRON -&gt; R.drawable.electron</b>
+<b class="fc"><i class="no-highlight">19</i>&nbsp;            Rocket.LONG_MARCH_2C, Rocket.LONG_MARCH_3B, Rocket.LONG_MARCH_4B -&gt; R.drawable.long_march</b>
+<b class="fc"><i class="no-highlight">20</i>&nbsp;            Rocket.H_IIA, Rocket.H_IIB -&gt; R.drawable.h_iib // good enough image for now for booth rockets</b>
+<b class="fc"><i class="no-highlight">21</i>&nbsp;            Rocket.GSLV_MK_II -&gt; R.drawable.gslv_mk_ii</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;            Rocket.GSLV_MK_III -&gt; R.drawable.gslv_mk_iii</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;            else -&gt; 0</b>
+<i class="no-highlight">24</i>&nbsp;        }
+<i class="no-highlight">25</i>&nbsp;    }
+<i class="no-highlight">26</i>&nbsp;
+<i class="no-highlight">27</i>&nbsp;    fun toStringRes(rocketId: Long?): Int {
+<b class="nc"><i class="no-highlight">28</i>&nbsp;        return when (rocketId) {</b>
+<b class="nc"><i class="no-highlight">29</i>&nbsp;            Rocket.ARIANE_5 -&gt; R.string.rocket_ariane_5</b>
+<b class="nc"><i class="no-highlight">30</i>&nbsp;            Rocket.FALCON_9 -&gt; R.string.rocket_falcon_9</b>
+<b class="nc"><i class="no-highlight">31</i>&nbsp;            Rocket.SOYUZ -&gt; R.string.rocket_soyuz</b>
+<b class="nc"><i class="no-highlight">32</i>&nbsp;            Rocket.DELTA_4_HEAVY -&gt; R.string.rocket_delta_VI_heavy</b>
+<b class="nc"><i class="no-highlight">33</i>&nbsp;            Rocket.FALCON_HEAVY -&gt; R.string.rocket_falcon_heavy</b>
+<b class="nc"><i class="no-highlight">34</i>&nbsp;            Rocket.ATLAS_5 -&gt; R.string.rocket_atlas_V</b>
+<b class="nc"><i class="no-highlight">35</i>&nbsp;            else -&gt; 0</b>
+<i class="no-highlight">36</i>&nbsp;        }
+<i class="no-highlight">37</i>&nbsp;    }
+<i class="no-highlight">38</i>&nbsp;
+<i class="no-highlight">39</i>&nbsp;    fun toDomainRocket(rocket: FilterRocket): Long {
+<b class="nc"><i class="no-highlight">40</i>&nbsp;        return when (rocket) {</b>
+<b class="nc"><i class="no-highlight">41</i>&nbsp;            FilterRocket.SOYUZ -&gt; Rocket.SOYUZ</b>
+<b class="nc"><i class="no-highlight">42</i>&nbsp;            FilterRocket.ARIANE_5 -&gt; Rocket.ARIANE_5</b>
+<b class="nc"><i class="no-highlight">43</i>&nbsp;            FilterRocket.FALCON_9 -&gt; Rocket.FALCON_9</b>
+<b class="nc"><i class="no-highlight">44</i>&nbsp;            FilterRocket.DELTA_4_HEAVY -&gt; Rocket.DELTA_4_HEAVY</b>
+<b class="nc"><i class="no-highlight">45</i>&nbsp;            FilterRocket.FALCON_HEAVY -&gt; Rocket.FALCON_HEAVY</b>
+<b class="nc"><i class="no-highlight">46</i>&nbsp;            FilterRocket.ATLAS_5 -&gt; Rocket.ATLAS_5</b>
+<i class="no-highlight">47</i>&nbsp;        }
+<i class="no-highlight">48</i>&nbsp;    }
+<i class="no-highlight">49</i>&nbsp;
+<i class="no-highlight">50</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-17 16:44</div>
+</div>
+</body>
+</html>

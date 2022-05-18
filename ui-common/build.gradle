@@ -5,6 +5,8 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+apply from: "$project.rootDir/jacoco.gradle"
+
 android {
     compileSdk buildConfig.compileSdk
 

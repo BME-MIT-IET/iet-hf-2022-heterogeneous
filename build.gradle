@@ -18,11 +18,12 @@ buildscript {
         classpath libs.kotlin.gradle
         classpath libs.dagger.hilt.gradle
         classpath 'info.cukes:cucumber-junit:1.2.5'
-
+        classpath "org.jacoco:org.jacoco.core:0.8.6"
     }
 }
 
 allprojects {
+    apply plugin: 'jacoco'
     repositories {
         mavenCentral()
         google()

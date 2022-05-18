@@ -6,6 +6,8 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
+apply from: "$project.rootDir/jacoco.gradle"
+
 android {
     compileSdk 32
 
