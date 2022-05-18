@@ -23,7 +23,17 @@ class ScheduleLaunchNotificationsImplTest {
     companion object {
         private val CURRENT_DATE_TIME: LocalDateTime = LocalDateTime.of(2001, 4, 30, 10, 0)
         private const val LAUNCH_ID = "id"
+
+        public fun getLaunchId(): String{
+            return LAUNCH_ID;
+        }
+
+        public fun getCurrDateTime(): LocalDateTime{
+            return CURRENT_DATE_TIME;
+        }
     }
+
+
 
     private lateinit var scheduleLaunchNotifications: ScheduleLaunchNotificationsImpl
 
