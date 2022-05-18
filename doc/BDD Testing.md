@@ -1,16 +1,25 @@
-# Test coverage, Unit testing
+# BDD Test
+A függőségeket hozzáadtuk a build.gradle fájlokban. Értelmeztük a modulokat és készítettünk teszteket a megfelelő esetekhez.
+
+## Base module
+Az alkalmazáshoz tartozó eseményeket, beállítások és értesítéseket tartalmazza
+
+### LocalDateTest
+Különböző időpontok/időzónák egymáshoz viszonyított és egymásson elvégzett műveletek helyességét vizsgálja. 
+
+![LocalDateTest](./screenshots/BDDLocalDateTest.png) 
+
+![LocalDateTestEredmeny](./screenshots/BDDLocalDateTestEredmeny.png)
+
+### TimeStampTest
+
+A rakéták kilövésével kapcsolatos időpontokat teszteli
+
+![TimeStampTest](./screenshots/TimeStampTest.png) 
+
+![LocalDateTestEredmeny](./screenshots/TimeStampTestEredmeny.png)
 
 
-## Test coverage
+## Domain module
 
-- A projektbe beépítettük a JaCoCo toolt, azonban nem sikerült vele érdemben kimutatni semmit, nem generálja le a kívánt coverage-filet. 
-- Az Android Studio beépített Coverage teszt futtatása során az alábbi kimenetet kaptuk:
-![](coverage.png)
-A projekt struktúrája borzalmasan szétszórt, a benne lévő teszteket alig lehet értelmezni / teljesen primitívek. Így nem csoda, hogy ilyen kicsi a lefedettség.
-![](coverage2.png)
-- Letöltöttünk egy generált lefedettséget bemutató weboldalt, ezt is hozzáadtuk a repository-hoz.
-
-### Unit testing
-- A kódban a meglévő tesztekből egyedül a "domain" modulban lévők közül volt érdemi. Ezeket kirgészíteni nem láttuk értelmét.
-- Próbáltuk a többi unit tesztet kiegészíteni, azonban a kód összevisszasága miatt nem tudtunk érdemi eredményt hozzárakni a már meglévőkhöz.
-- Nem értük el az adatbázist, a firebase-hez nincs hozzáférésünk. Logikátlanul van szétszedve modulokra a kód.
+Létrehoztuk a teszteket és a tesztekhez szükséges Inicializáló és segéd fájlokat. Definiáltuk a tesztekhez szükséges lépéseket, de mégsem működnek. Minden létrehozott fájl megtalálható a base/src/test mappán belül az általunk létrehozott kotlin és resource mappákban.
