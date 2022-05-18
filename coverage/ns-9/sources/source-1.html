@@ -1,0 +1,141 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > LaunchUtilsKt</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">sk.kasper.domain.utils</a>
+</div>
+
+<h1>Coverage Summary for Class: LaunchUtilsKt (sk.kasper.domain.utils)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">LaunchUtilsKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    90%
+  </span>
+  <span class="absValue">
+    (27/30)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package sk.kasper.domain.utils
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import org.threeten.bp.LocalDateTime
+<i class="no-highlight">4</i>&nbsp;import sk.kasper.entity.Launch
+<i class="no-highlight">5</i>&nbsp;import sk.kasper.entity.Tag
+<i class="no-highlight">6</i>&nbsp;
+<b class="fc"><i class="no-highlight">7</i>&nbsp;fun createLaunch(</b>
+<b class="fc"><i class="no-highlight">8</i>&nbsp;        id: String = &quot;&quot;,</b>
+<b class="fc"><i class="no-highlight">9</i>&nbsp;        launchName: String = &quot;&quot;,</b>
+<b class="fc"><i class="no-highlight">10</i>&nbsp;        description: String? = null,</b>
+<b class="nc"><i class="no-highlight">11</i>&nbsp;        launchDateTime: LocalDateTime = LocalDateTime.MIN,</b>
+<b class="fc"><i class="no-highlight">12</i>&nbsp;        mainPhotoUrl: String? = null,</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;        hashTag: String? = null,</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;        payloadMass: Int? = null,</b>
+<b class="fc"><i class="no-highlight">15</i>&nbsp;        rocketId: Long? = null,</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;        rocketName: String? = null,</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;        videoUrl: String? = null,</b>
+<b class="nc"><i class="no-highlight">18</i>&nbsp;        accurateDate: Boolean = true,</b>
+<b class="nc"><i class="no-highlight">19</i>&nbsp;        accurateTime: Boolean = true,</b>
+<b class="fc"><i class="no-highlight">20</i>&nbsp;        manufacturerName: String? = null,</b>
+<b class="fc"><i class="no-highlight">21</i>&nbsp;        tags: List&lt;Tag&gt; = emptyList()</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;) = Launch(</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;        id,</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;        launchName,</b>
+<b class="fc"><i class="no-highlight">25</i>&nbsp;        description,</b>
+<b class="fc"><i class="no-highlight">26</i>&nbsp;        launchDateTime,</b>
+<b class="fc"><i class="no-highlight">27</i>&nbsp;        mainPhotoUrl,</b>
+<b class="fc"><i class="no-highlight">28</i>&nbsp;        hashTag,</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;        payloadMass,</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;        rocketId,</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;        rocketName,</b>
+<b class="fc"><i class="no-highlight">32</i>&nbsp;        videoUrl,</b>
+<b class="fc"><i class="no-highlight">33</i>&nbsp;        accurateDate,</b>
+<b class="fc"><i class="no-highlight">34</i>&nbsp;        accurateTime,</b>
+<b class="fc"><i class="no-highlight">35</i>&nbsp;        manufacturerName,</b>
+<b class="fc"><i class="no-highlight">36</i>&nbsp;        tags)</b>
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-17 16:44</div>
+</div>
+</body>
+</html>

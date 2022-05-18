@@ -1,0 +1,100 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Launch</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">sk.kasper.entity</a>
+</div>
+
+<h1>Coverage Summary for Class: Launch (sk.kasper.entity)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">Launch</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package sk.kasper.entity
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import org.threeten.bp.LocalDateTime
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;data class Launch(
+<i class="no-highlight">6</i>&nbsp;        val id: String,
+<i class="no-highlight">7</i>&nbsp;        val launchName: String,
+<i class="no-highlight">8</i>&nbsp;        val description: String?,
+<i class="no-highlight">9</i>&nbsp;        val launchDateTime: LocalDateTime,
+<i class="no-highlight">10</i>&nbsp;        val mainPhotoUrl: String?,
+<i class="no-highlight">11</i>&nbsp;        val hashTag: String?,
+<i class="no-highlight">12</i>&nbsp;        val payloadMass: Int?,
+<i class="no-highlight">13</i>&nbsp;        val rocketId: Long?,
+<i class="no-highlight">14</i>&nbsp;        val rocketName: String?,
+<i class="no-highlight">15</i>&nbsp;        val videoUrl: String?,
+<i class="no-highlight">16</i>&nbsp;        val accurateDate: Boolean,
+<i class="no-highlight">17</i>&nbsp;        val accurateTime: Boolean,
+<i class="no-highlight">18</i>&nbsp;        val manufacturerName: String?,
+<i class="no-highlight">19</i>&nbsp;        val tags: List&lt;Tag&gt;) {
+<i class="no-highlight">20</i>&nbsp;
+<i class="no-highlight">21</i>&nbsp;    data class LaunchNameParts(val rocketName: String?, val missionName: String?)
+<i class="no-highlight">22</i>&nbsp;
+<i class="no-highlight">23</i>&nbsp;    val launchNameParts: LaunchNameParts
+<i class="no-highlight">24</i>&nbsp;        get() {
+<i class="no-highlight">25</i>&nbsp;            val parts = launchName.split(&quot;|&quot;).map { it.trim() }
+<i class="no-highlight">26</i>&nbsp;            return LaunchNameParts(
+<i class="no-highlight">27</i>&nbsp;                    parts.elementAtOrNull(0),
+<i class="no-highlight">28</i>&nbsp;                    parts.elementAtOrNull(1))
+<i class="no-highlight">29</i>&nbsp;        }
+<i class="no-highlight">30</i>&nbsp;
+<i class="no-highlight">31</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-17 16:44</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > SettingsManager</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">sk.kasper.base</a>
+</div>
+
+<h1>Coverage Summary for Class: SettingsManager (sk.kasper.base)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+</tr>
+  <tr>
+    <td class="name">SettingsManager$MockitoMock$1265345534</td>
+  </tr>
+  <tr>
+    <td class="name">SettingsManager$MockitoMock$1265345534$auxiliary$2Dl9vhYc</td>
+  </tr>
+  <tr>
+    <td class="name">SettingsManager$MockitoMock$1265345534$auxiliary$uxvtIUW0</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package sk.kasper.base
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import kotlinx.coroutines.flow.Flow
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;interface SettingsManager {
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;    companion object {
+<i class="no-highlight">8</i>&nbsp;        const val PRODUCTION = 0
+<i class="no-highlight">9</i>&nbsp;        const val LOCALHOST = 1
+<i class="no-highlight">10</i>&nbsp;        const val RASPBERRY = 2
+<i class="no-highlight">11</i>&nbsp;    }
+<i class="no-highlight">12</i>&nbsp;
+<i class="no-highlight">13</i>&nbsp;    val showUnconfirmedLaunches: Boolean
+<i class="no-highlight">14</i>&nbsp;    var showLaunchNotifications: Boolean
+<i class="no-highlight">15</i>&nbsp;    val durationBeforeNotificationIsShown: Int
+<i class="no-highlight">16</i>&nbsp;    var nightMode: Int
+<i class="no-highlight">17</i>&nbsp;    val apiEndpoint: Int
+<i class="no-highlight">18</i>&nbsp;    val apiEndPointValues: List&lt;Int&gt;
+<i class="no-highlight">19</i>&nbsp;    val durationValues: List&lt;Int&gt;
+<i class="no-highlight">20</i>&nbsp;    val nightModeValues: List&lt;Int&gt;
+<i class="no-highlight">21</i>&nbsp;    fun getSettingChanges(): Flow&lt;SettingKey&gt;
+<i class="no-highlight">22</i>&nbsp;    fun getIntAsFlow(key: SettingKey): Flow&lt;Int&gt;
+<i class="no-highlight">23</i>&nbsp;    fun getBoolAsFlow(key: SettingKey): Flow&lt;Boolean&gt;
+<i class="no-highlight">24</i>&nbsp;    fun addSettingChangeListener(listener: SettingChangeListener)
+<i class="no-highlight">25</i>&nbsp;    fun removeSettingChangeListener(listener: SettingChangeListener)
+<i class="no-highlight">26</i>&nbsp;    fun toggleTheme()
+<i class="no-highlight">27</i>&nbsp;    fun getBoolean(key: SettingKey): Boolean
+<i class="no-highlight">28</i>&nbsp;    fun setBoolean(key: SettingKey, value: Boolean)
+<i class="no-highlight">29</i>&nbsp;    fun getInt(key: SettingKey): Int
+<i class="no-highlight">30</i>&nbsp;    fun setInt(key: SettingKey, value: Int)
+<i class="no-highlight">31</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-17 16:44</div>
+</div>
+</body>
+</html>
