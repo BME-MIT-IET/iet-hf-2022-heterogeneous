@@ -21,3 +21,18 @@ Habár ez egy generált fájl, mégis fontos az olvashatóság maximalizálása.
 ## ui-timeline
 
 ### String kiszervezés változóba
+Rakéták inicializálásánál sokszor jelent meg ugyan az a string. Kiszervezéssel átláthatobb és kisebb az esély a hibázásra.
+
+![Kiszervezes](./screenshots/resourceKiszervezese.png)
+
+### Üres esemény kezelés
+A "SuccessResponse"-ra ures a függvényt. Teljesen felesleges az a része.
+
+![Kiszervezes](./screenshots/feleslegesResz.png)
+
+## ui-settings
+
+### Felesleges bemeneti paraméter
+Az "onSettingChanged"-ben nem használja semmire sem a bemeneti változót
+
+![Kiszervezes](./screenshots/FeleslegesParameter.png)
