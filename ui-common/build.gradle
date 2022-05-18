@@ -42,6 +42,7 @@ android {
     }
 }
 
+
 dependencies {
     api project(":base")
     api project(":entity")
@@ -86,4 +87,13 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.test.junit
     androidTestImplementation libs.androidx.test.espresso.core
+
+
+    testImplementation 'io.cucumber:cucumber-java8:6.1.1'
+    testImplementation 'info.cukes:cucumber-junit:1.2.5'
+}
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }
