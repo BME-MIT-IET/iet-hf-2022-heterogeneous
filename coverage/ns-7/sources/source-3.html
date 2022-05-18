@@ -1,0 +1,385 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PhotoDao_Impl</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">sk.kasper.database.dao</a>
+</div>
+
+<h1>Coverage Summary for Class: PhotoDao_Impl (sk.kasper.database.dao)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PhotoDao_Impl</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/13)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">PhotoDao_Impl$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/15)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PhotoDao_Impl$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/6)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PhotoDao_Impl$3</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/7)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PhotoDao_Impl$4</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/7)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PhotoDao_Impl$5</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/21)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/69)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package sk.kasper.database.dao;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import android.database.Cursor;
+<i class="no-highlight">4</i>&nbsp;import androidx.room.CoroutinesRoom;
+<i class="no-highlight">5</i>&nbsp;import androidx.room.EntityInsertionAdapter;
+<i class="no-highlight">6</i>&nbsp;import androidx.room.RoomDatabase;
+<i class="no-highlight">7</i>&nbsp;import androidx.room.RoomSQLiteQuery;
+<i class="no-highlight">8</i>&nbsp;import androidx.room.util.CursorUtil;
+<i class="no-highlight">9</i>&nbsp;import androidx.room.util.DBUtil;
+<i class="no-highlight">10</i>&nbsp;import androidx.sqlite.db.SupportSQLiteStatement;
+<i class="no-highlight">11</i>&nbsp;import java.lang.Exception;
+<i class="no-highlight">12</i>&nbsp;import java.lang.Long;
+<i class="no-highlight">13</i>&nbsp;import java.lang.Object;
+<i class="no-highlight">14</i>&nbsp;import java.lang.Override;
+<i class="no-highlight">15</i>&nbsp;import java.lang.String;
+<i class="no-highlight">16</i>&nbsp;import java.lang.SuppressWarnings;
+<i class="no-highlight">17</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">18</i>&nbsp;import java.util.List;
+<i class="no-highlight">19</i>&nbsp;import java.util.concurrent.Callable;
+<i class="no-highlight">20</i>&nbsp;import javax.annotation.processing.Generated;
+<i class="no-highlight">21</i>&nbsp;import kotlin.Unit;
+<i class="no-highlight">22</i>&nbsp;import kotlin.coroutines.Continuation;
+<i class="no-highlight">23</i>&nbsp;import sk.kasper.database.entity.PhotoEntity;
+<i class="no-highlight">24</i>&nbsp;import sk.kasper.database.entity.PhotoLaunchEntity;
+<i class="no-highlight">25</i>&nbsp;
+<i class="no-highlight">26</i>&nbsp;@Generated(&quot;androidx.room.RoomProcessor&quot;)
+<i class="no-highlight">27</i>&nbsp;@SuppressWarnings({&quot;unchecked&quot;, &quot;deprecation&quot;})
+<i class="no-highlight">28</i>&nbsp;public final class PhotoDao_Impl implements PhotoDao {
+<i class="no-highlight">29</i>&nbsp;  private final RoomDatabase __db;
+<i class="no-highlight">30</i>&nbsp;
+<i class="no-highlight">31</i>&nbsp;  private final EntityInsertionAdapter&lt;PhotoEntity&gt; __insertionAdapterOfPhotoEntity;
+<i class="no-highlight">32</i>&nbsp;
+<i class="no-highlight">33</i>&nbsp;  private final EntityInsertionAdapter&lt;PhotoLaunchEntity&gt; __insertionAdapterOfPhotoLaunchEntity;
+<i class="no-highlight">34</i>&nbsp;
+<b class="nc"><i class="no-highlight">35</i>&nbsp;  public PhotoDao_Impl(RoomDatabase __db) {</b>
+<b class="nc"><i class="no-highlight">36</i>&nbsp;    this.__db = __db;</b>
+<b class="nc"><i class="no-highlight">37</i>&nbsp;    this.__insertionAdapterOfPhotoEntity = new EntityInsertionAdapter&lt;PhotoEntity&gt;(__db) {</b>
+<i class="no-highlight">38</i>&nbsp;      @Override
+<i class="no-highlight">39</i>&nbsp;      public String createQuery() {
+<b class="nc"><i class="no-highlight">40</i>&nbsp;        return &quot;INSERT OR REPLACE INTO `photo` (`id`,`thumbnailUrl`,`fullSizeUrl`,`sourceName`,`description`) VALUES (?,?,?,?,?)&quot;;</b>
+<i class="no-highlight">41</i>&nbsp;      }
+<i class="no-highlight">42</i>&nbsp;
+<i class="no-highlight">43</i>&nbsp;      @Override
+<i class="no-highlight">44</i>&nbsp;      public void bind(SupportSQLiteStatement stmt, PhotoEntity value) {
+<b class="nc"><i class="no-highlight">45</i>&nbsp;        stmt.bindLong(1, value.getId());</b>
+<b class="nc"><i class="no-highlight">46</i>&nbsp;        if (value.getThumbnailUrl() == null) {</b>
+<b class="nc"><i class="no-highlight">47</i>&nbsp;          stmt.bindNull(2);</b>
+<i class="no-highlight">48</i>&nbsp;        } else {
+<b class="nc"><i class="no-highlight">49</i>&nbsp;          stmt.bindString(2, value.getThumbnailUrl());</b>
+<i class="no-highlight">50</i>&nbsp;        }
+<b class="nc"><i class="no-highlight">51</i>&nbsp;        if (value.getFullSizeUrl() == null) {</b>
+<b class="nc"><i class="no-highlight">52</i>&nbsp;          stmt.bindNull(3);</b>
+<i class="no-highlight">53</i>&nbsp;        } else {
+<b class="nc"><i class="no-highlight">54</i>&nbsp;          stmt.bindString(3, value.getFullSizeUrl());</b>
+<i class="no-highlight">55</i>&nbsp;        }
+<b class="nc"><i class="no-highlight">56</i>&nbsp;        if (value.getSourceName() == null) {</b>
+<b class="nc"><i class="no-highlight">57</i>&nbsp;          stmt.bindNull(4);</b>
+<i class="no-highlight">58</i>&nbsp;        } else {
+<b class="nc"><i class="no-highlight">59</i>&nbsp;          stmt.bindString(4, value.getSourceName());</b>
+<i class="no-highlight">60</i>&nbsp;        }
+<b class="nc"><i class="no-highlight">61</i>&nbsp;        if (value.getDescription() == null) {</b>
+<b class="nc"><i class="no-highlight">62</i>&nbsp;          stmt.bindNull(5);</b>
+<i class="no-highlight">63</i>&nbsp;        } else {
+<b class="nc"><i class="no-highlight">64</i>&nbsp;          stmt.bindString(5, value.getDescription());</b>
+<i class="no-highlight">65</i>&nbsp;        }
+<i class="no-highlight">66</i>&nbsp;      }
+<i class="no-highlight">67</i>&nbsp;    };
+<b class="nc"><i class="no-highlight">68</i>&nbsp;    this.__insertionAdapterOfPhotoLaunchEntity = new EntityInsertionAdapter&lt;PhotoLaunchEntity&gt;(__db) {</b>
+<i class="no-highlight">69</i>&nbsp;      @Override
+<i class="no-highlight">70</i>&nbsp;      public String createQuery() {
+<b class="nc"><i class="no-highlight">71</i>&nbsp;        return &quot;INSERT OR ABORT INTO `photo_launch` (`photoId`,`launchId`) VALUES (?,?)&quot;;</b>
+<i class="no-highlight">72</i>&nbsp;      }
+<i class="no-highlight">73</i>&nbsp;
+<i class="no-highlight">74</i>&nbsp;      @Override
+<i class="no-highlight">75</i>&nbsp;      public void bind(SupportSQLiteStatement stmt, PhotoLaunchEntity value) {
+<b class="nc"><i class="no-highlight">76</i>&nbsp;        stmt.bindLong(1, value.getPhotoId());</b>
+<b class="nc"><i class="no-highlight">77</i>&nbsp;        if (value.getLaunchId() == null) {</b>
+<b class="nc"><i class="no-highlight">78</i>&nbsp;          stmt.bindNull(2);</b>
+<i class="no-highlight">79</i>&nbsp;        } else {
+<b class="nc"><i class="no-highlight">80</i>&nbsp;          stmt.bindString(2, value.getLaunchId());</b>
+<i class="no-highlight">81</i>&nbsp;        }
+<i class="no-highlight">82</i>&nbsp;      }
+<i class="no-highlight">83</i>&nbsp;    };
+<i class="no-highlight">84</i>&nbsp;  }
+<i class="no-highlight">85</i>&nbsp;
+<i class="no-highlight">86</i>&nbsp;  @Override
+<i class="no-highlight">87</i>&nbsp;  public Object insertAll(final PhotoEntity[] arg0, final Continuation&lt;? super List&lt;Long&gt;&gt; arg1) {
+<b class="nc"><i class="no-highlight">88</i>&nbsp;    return CoroutinesRoom.execute(__db, true, new Callable&lt;List&lt;Long&gt;&gt;() {</b>
+<i class="no-highlight">89</i>&nbsp;      @Override
+<i class="no-highlight">90</i>&nbsp;      public List&lt;Long&gt; call() throws Exception {
+<b class="nc"><i class="no-highlight">91</i>&nbsp;        __db.beginTransaction();</b>
+<i class="no-highlight">92</i>&nbsp;        try {
+<b class="nc"><i class="no-highlight">93</i>&nbsp;          List&lt;Long&gt; _result = __insertionAdapterOfPhotoEntity.insertAndReturnIdsList(arg0);</b>
+<b class="nc"><i class="no-highlight">94</i>&nbsp;          __db.setTransactionSuccessful();</b>
+<b class="nc"><i class="no-highlight">95</i>&nbsp;          return _result;</b>
+<i class="no-highlight">96</i>&nbsp;        } finally {
+<b class="nc"><i class="no-highlight">97</i>&nbsp;          __db.endTransaction();</b>
+<b class="nc"><i class="no-highlight">98</i>&nbsp;        }</b>
+<i class="no-highlight">99</i>&nbsp;      }
+<i class="no-highlight">100</i>&nbsp;    }, arg1);
+<i class="no-highlight">101</i>&nbsp;  }
+<i class="no-highlight">102</i>&nbsp;
+<i class="no-highlight">103</i>&nbsp;  @Override
+<i class="no-highlight">104</i>&nbsp;  public Object insertAll(final PhotoLaunchEntity[] arg0, final Continuation&lt;? super Unit&gt; arg1) {
+<b class="nc"><i class="no-highlight">105</i>&nbsp;    return CoroutinesRoom.execute(__db, true, new Callable&lt;Unit&gt;() {</b>
+<i class="no-highlight">106</i>&nbsp;      @Override
+<i class="no-highlight">107</i>&nbsp;      public Unit call() throws Exception {
+<b class="nc"><i class="no-highlight">108</i>&nbsp;        __db.beginTransaction();</b>
+<i class="no-highlight">109</i>&nbsp;        try {
+<b class="nc"><i class="no-highlight">110</i>&nbsp;          __insertionAdapterOfPhotoLaunchEntity.insert(arg0);</b>
+<b class="nc"><i class="no-highlight">111</i>&nbsp;          __db.setTransactionSuccessful();</b>
+<b class="nc"><i class="no-highlight">112</i>&nbsp;          return Unit.INSTANCE;</b>
+<i class="no-highlight">113</i>&nbsp;        } finally {
+<b class="nc"><i class="no-highlight">114</i>&nbsp;          __db.endTransaction();</b>
+<b class="nc"><i class="no-highlight">115</i>&nbsp;        }</b>
+<i class="no-highlight">116</i>&nbsp;      }
+<i class="no-highlight">117</i>&nbsp;    }, arg1);
+<i class="no-highlight">118</i>&nbsp;  }
+<i class="no-highlight">119</i>&nbsp;
+<i class="no-highlight">120</i>&nbsp;  @Override
+<i class="no-highlight">121</i>&nbsp;  public Object loadLaunchPhotos(final String arg0,
+<i class="no-highlight">122</i>&nbsp;      final Continuation&lt;? super List&lt;PhotoEntity&gt;&gt; arg1) {
+<b class="nc"><i class="no-highlight">123</i>&nbsp;    final String _sql = &quot;\n&quot;</b>
+<i class="no-highlight">124</i>&nbsp;            + &quot;                SELECT\n&quot;
+<i class="no-highlight">125</i>&nbsp;            + &quot;                    id,\n&quot;
+<i class="no-highlight">126</i>&nbsp;            + &quot;                    thumbnailUrl,\n&quot;
+<i class="no-highlight">127</i>&nbsp;            + &quot;                    fullSizeUrl,\n&quot;
+<i class="no-highlight">128</i>&nbsp;            + &quot;                    sourceName,\n&quot;
+<i class="no-highlight">129</i>&nbsp;            + &quot;                    description\n&quot;
+<i class="no-highlight">130</i>&nbsp;            + &quot;                FROM\n&quot;
+<i class="no-highlight">131</i>&nbsp;            + &quot;                    photo\n&quot;
+<i class="no-highlight">132</i>&nbsp;            + &quot;                INNER JOIN\n&quot;
+<i class="no-highlight">133</i>&nbsp;            + &quot;                    photo_launch ON photo.id=photo_launch.photoId\n&quot;
+<i class="no-highlight">134</i>&nbsp;            + &quot;                WHERE\n&quot;
+<i class="no-highlight">135</i>&nbsp;            + &quot;                    photo_launch.launchId=?\n&quot;
+<i class="no-highlight">136</i>&nbsp;            + &quot;                    &quot;;
+<b class="nc"><i class="no-highlight">137</i>&nbsp;    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);</b>
+<b class="nc"><i class="no-highlight">138</i>&nbsp;    int _argIndex = 1;</b>
+<b class="nc"><i class="no-highlight">139</i>&nbsp;    if (arg0 == null) {</b>
+<b class="nc"><i class="no-highlight">140</i>&nbsp;      _statement.bindNull(_argIndex);</b>
+<i class="no-highlight">141</i>&nbsp;    } else {
+<b class="nc"><i class="no-highlight">142</i>&nbsp;      _statement.bindString(_argIndex, arg0);</b>
+<i class="no-highlight">143</i>&nbsp;    }
+<b class="nc"><i class="no-highlight">144</i>&nbsp;    return CoroutinesRoom.execute(__db, false, new Callable&lt;List&lt;PhotoEntity&gt;&gt;() {</b>
+<i class="no-highlight">145</i>&nbsp;      @Override
+<i class="no-highlight">146</i>&nbsp;      public List&lt;PhotoEntity&gt; call() throws Exception {
+<b class="nc"><i class="no-highlight">147</i>&nbsp;        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);</b>
+<i class="no-highlight">148</i>&nbsp;        try {
+<b class="nc"><i class="no-highlight">149</i>&nbsp;          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, &quot;id&quot;);</b>
+<b class="nc"><i class="no-highlight">150</i>&nbsp;          final int _cursorIndexOfThumbnailUrl = CursorUtil.getColumnIndexOrThrow(_cursor, &quot;thumbnailUrl&quot;);</b>
+<b class="nc"><i class="no-highlight">151</i>&nbsp;          final int _cursorIndexOfFullSizeUrl = CursorUtil.getColumnIndexOrThrow(_cursor, &quot;fullSizeUrl&quot;);</b>
+<b class="nc"><i class="no-highlight">152</i>&nbsp;          final int _cursorIndexOfSourceName = CursorUtil.getColumnIndexOrThrow(_cursor, &quot;sourceName&quot;);</b>
+<b class="nc"><i class="no-highlight">153</i>&nbsp;          final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, &quot;description&quot;);</b>
+<b class="nc"><i class="no-highlight">154</i>&nbsp;          final List&lt;PhotoEntity&gt; _result = new ArrayList&lt;PhotoEntity&gt;(_cursor.getCount());</b>
+<b class="nc"><i class="no-highlight">155</i>&nbsp;          while(_cursor.moveToNext()) {</b>
+<i class="no-highlight">156</i>&nbsp;            final PhotoEntity _item;
+<i class="no-highlight">157</i>&nbsp;            final long _tmpId;
+<b class="nc"><i class="no-highlight">158</i>&nbsp;            _tmpId = _cursor.getLong(_cursorIndexOfId);</b>
+<i class="no-highlight">159</i>&nbsp;            final String _tmpThumbnailUrl;
+<b class="nc"><i class="no-highlight">160</i>&nbsp;            _tmpThumbnailUrl = _cursor.getString(_cursorIndexOfThumbnailUrl);</b>
+<i class="no-highlight">161</i>&nbsp;            final String _tmpFullSizeUrl;
+<b class="nc"><i class="no-highlight">162</i>&nbsp;            _tmpFullSizeUrl = _cursor.getString(_cursorIndexOfFullSizeUrl);</b>
+<i class="no-highlight">163</i>&nbsp;            final String _tmpSourceName;
+<b class="nc"><i class="no-highlight">164</i>&nbsp;            _tmpSourceName = _cursor.getString(_cursorIndexOfSourceName);</b>
+<i class="no-highlight">165</i>&nbsp;            final String _tmpDescription;
+<b class="nc"><i class="no-highlight">166</i>&nbsp;            _tmpDescription = _cursor.getString(_cursorIndexOfDescription);</b>
+<b class="nc"><i class="no-highlight">167</i>&nbsp;            _item = new PhotoEntity(_tmpId,_tmpThumbnailUrl,_tmpFullSizeUrl,_tmpSourceName,_tmpDescription);</b>
+<b class="nc"><i class="no-highlight">168</i>&nbsp;            _result.add(_item);</b>
+<b class="nc"><i class="no-highlight">169</i>&nbsp;          }</b>
+<b class="nc"><i class="no-highlight">170</i>&nbsp;          return _result;</b>
+<i class="no-highlight">171</i>&nbsp;        } finally {
+<b class="nc"><i class="no-highlight">172</i>&nbsp;          _cursor.close();</b>
+<b class="nc"><i class="no-highlight">173</i>&nbsp;          _statement.release();</b>
+<b class="nc"><i class="no-highlight">174</i>&nbsp;        }</b>
+<i class="no-highlight">175</i>&nbsp;      }
+<i class="no-highlight">176</i>&nbsp;    }, arg1);
+<i class="no-highlight">177</i>&nbsp;  }
+<i class="no-highlight">178</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-17 16:44</div>
+</div>
+</body>
+</html>
