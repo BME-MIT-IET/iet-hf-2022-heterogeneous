@@ -17,3 +17,7 @@ Egy másik probléma, hogy a View-oknak nem szabadna direkt co-routin-okat indit
 Habár ez egy generált fájl, mégis fontos az olvashatóság maximalizálása. Valószínüleg a kód generátor azért anonim osztályokat hozott létre, hogy ezek java 8 előtti verziókkal is kompatibilisek legyenek, de mivel a projectünk 11-es jdk-val dolgozik, ezt javíthatjuk.
 
 ![Lambda](./screenshots/Lambda1.png) ![Lambda](./screenshots/Lambda2.png)
+
+## ui-timeline
+
+### String kiszervezés változóba
